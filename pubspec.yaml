@@ -2,3 +2,4 @@ name: nhl_today
 
 dependencies:
   http: ^0.12.2
+  convert: ^2.1.1
