@@ -1,5 +1,7 @@
 # NHL Today #
+NHL Today gives users a snapshot of the NHL scoreboard in the comfort of their own terminal.
 
+## Installation ##
 If you do not have `dart` installed, install `dart` using 
 
 Windows:
@@ -18,9 +20,16 @@ brew install dart
 
 >Or, to upgrade: use `brew upgrade dart`
 
-## Initializing ##
+### Import Dependencies ###
 To use this repository, install the dependencies using: 
 
 ```
 pub get
 ```
+
+## Shoutouts ##
+
+The URL to obtain the NHL information was found at [https://github.com/dword4/nhlapi](https://github.com/dword4/nhlapi), where contributors
+graciously used their time to figure out the public, non-documented NHL API. 
+
+The JSON parsing logic used was generated using [https://github.com/javiercbk/json_to_dart](https://github.com/javiercbk/json_to_dart).

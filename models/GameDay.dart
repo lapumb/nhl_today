@@ -1,36 +1,35 @@
-import 'game.dart';
-import 'package:nhl_today/Utilities.dart';
-
-final String tag = 'GameDay';
+import 'Schedule.dart';
 
 class GameDay {
-  String date;
+  String copyright;
+  int totalItems;
+  int totalEvents;
   int totalGames;
-  List<Game> games;
+  int totalMatches;
+  int wait;
+  List<Schedule> dates;
 
-  GameDay(this.date, this.totalGames, [this.games]);
+  GameDay(
+      {this.copyright,
+      this.totalItems,
+      this.totalEvents,
+      this.totalGames,
+      this.totalMatches,
+      this.wait,
+      this.dates});
 
-  factory GameDay.fromJson(dynamic rawJson) {
-    var json = rawJson['dates'] as dynamic;
-    if (json == null) {
-      Utilities.LOG(tag, 'there are no games on today');
-      return GameDay('null', 0, null);
+  GameDay.fromJson(Map<String, dynamic> json) {
+    copyright = json['copyright'];
+    totalItems = json['totalItems'];
+    totalEvents = json['totalEvents'];
+    totalGames = json['totalGames'];
+    totalMatches = json['totalMatches'];
+    wait = json['wait'];
+    if (json['dates'] != null) {
+      dates = new List<Schedule>();
+      json['dates'].forEach((v) {
+        dates.add(new Schedule.fromJson(v));
+      });
     }
-
-    Utilities.LOG(tag, "debug1");
-
-    var gameJsonObjects = json['games'] as dynamic;
-    gameJsonObjects = gameJsonObjects as List;
-    List<Game> _games =
-        gameJsonObjects.map((gameJson) => Game.fromJson(gameJson)).toList();
-
-    Utilities.LOG(tag, "debug2");
-
-    return GameDay(json['date'] as String, json['totalGames'] as int, _games);
-  }
-
-  @override
-  String toString() {
-    return '\n\n$date, $totalGames, $games';
   }
 }
