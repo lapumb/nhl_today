@@ -1,5 +1,3 @@
-![Continuous Integration](https://github.com/lapumb/nhl_today/workflows/Continuous%20Integration/badge.svg?branch=master)
-
 # NHL Today #
 NHL Today gives users a snapshot of the NHL scoreboard in the comfort of their own terminal.
 
