@@ -1,16 +1,13 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
-import 'models/GameDay.dart';
-import 'package:nhl_today/Utilities.dart';
 import 'package:nhl_today/Constants.dart';
 
-final String tag = "Main"; 
+import 'models/GameDay.dart';
+import 'Display.dart';
 
+/// Main application driver
 void main() async {
-  // enable debug logs
-  Utilities.logIsEnabled(true);
-
   // init http client
   var client = http.Client();
 
@@ -22,11 +19,10 @@ void main() async {
     // parse json
     Map<String, dynamic> json =
         convert.jsonDecode(response.body) as Map<String, dynamic>;
-    GameDay games = GameDay.fromJson(json);
-    Utilities.LOG(tag, '$games'); 
+    GameDay day = GameDay.fromJson(json);
+
+    display(day);
   } else {
     print('Request failed with status: ${response.statusCode}.');
   }
-
-  return;
 }

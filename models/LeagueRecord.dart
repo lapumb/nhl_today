@@ -12,4 +12,9 @@ class LeagueRecord {
     ot = json['ot'];
     type = json['type'];
   }
+
+  @override
+  String toString() {
+    return '$wins-$losses-$ot'; 
+  }
 }

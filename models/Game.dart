@@ -3,7 +3,7 @@ import 'Teams.dart';
 import 'Linescore.dart'; 
 import 'Team.dart';
 
-class Games {
+class Game {
   int gamePk;
   String link;
   String gameType;
@@ -14,7 +14,7 @@ class Games {
   Linescore linescore;
   Team venue;
 
-  Games(
+  Game(
       {this.gamePk,
       this.link,
       this.gameType,
@@ -25,7 +25,7 @@ class Games {
       this.linescore,
       this.venue});
 
-  Games.fromJson(Map<String, dynamic> json) {
+  Game.fromJson(Map<String, dynamic> json) {
     gamePk = json['gamePk'];
     link = json['link'];
     gameType = json['gameType'];

@@ -1,4 +1,4 @@
-import 'Games.dart';
+import 'Game.dart';
 
 class Schedule {
   String date;
@@ -6,7 +6,7 @@ class Schedule {
   int totalEvents;
   int totalGames;
   int totalMatches;
-  List<Games> games;
+  List<Game> games;
 
   Schedule({
     this.date,
@@ -24,9 +24,9 @@ class Schedule {
     totalGames = json['totalGames'];
     totalMatches = json['totalMatches'];
     if (json['games'] != null) {
-      games = new List<Games>();
+      games = new List<Game>();
       json['games'].forEach((v) {
-        games.add(new Games.fromJson(v));
+        games.add(new Game.fromJson(v));
       });
     }
   }
