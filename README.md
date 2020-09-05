@@ -27,6 +27,11 @@ To use this repository, install the dependencies using:
 pub get
 ```
 
+### Running ###
+```
+dart Main.dart
+```
+
 ## Shoutouts ##
 
 The URL to obtain the NHL information was found at [https://github.com/dword4/nhlapi](https://github.com/dword4/nhlapi), where contributors
