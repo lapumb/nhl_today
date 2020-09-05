@@ -1,9 +1,9 @@
 import 'package:nhl_today/Utilities.dart';
 
-import 'models/GameDay.dart';
-import 'models/Schedule.dart';
-import 'models/Game.dart';
-import 'models/TeamInfo.dart';
+import 'package:nhl_today/models/GameDay.dart';
+import 'package:nhl_today/models/Schedule.dart';
+import 'package:nhl_today/models/Game.dart';
+import 'package:nhl_today/models/TeamInfo.dart';
 
 final String _tag = 'Display';
 

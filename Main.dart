@@ -3,7 +3,7 @@ import 'dart:convert' as convert;
 
 import 'package:nhl_today/Constants.dart';
 
-import 'models/GameDay.dart';
+import 'package:nhl_today/models/GameDay.dart';
 import 'Display.dart';
 
 /// Main application driver
