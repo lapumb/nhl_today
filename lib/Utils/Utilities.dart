@@ -8,10 +8,7 @@ class Utilities {
 
   /// Print a log in the format [tag]: [message]
   static void LOG(String tag, String message) {
-    if (!logEnabled) {
-      print('logs are disabled');
-      return;
-    }
+    if (!logEnabled) return;
 
     print('$tag: $message');
   }
