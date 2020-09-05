@@ -5,10 +5,16 @@ import 'package:nhl_today/models/Schedule.dart';
 import 'package:nhl_today/models/Game.dart';
 import 'package:nhl_today/models/TeamInfo.dart';
 
+/// Tag for logging
 final String _tag = 'Display';
 
+/// Expected string value if a game is schedules
 final String gameStatusScheduled = 'Scheduled';
+
+/// Expected string value if a game is in progress
 final String gameStatusInProgress = 'In Progress';
+
+/// Expected string value if a game complete
 final String gameStatusFinal = 'Final';
 
 /// Helper function to print common statements used independent of game status
