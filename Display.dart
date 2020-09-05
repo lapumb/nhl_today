@@ -1,4 +1,4 @@
-import 'package:nhl_today/Utilities.dart';
+import 'package:nhl_today/Utils/Utilities.dart';
 
 import 'package:nhl_today/models/GameDay.dart';
 import 'package:nhl_today/models/Schedule.dart';
