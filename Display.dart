@@ -34,8 +34,8 @@ void _printGameStatusInProgress(Game game) {
   TeamInfo awayTeam = game.teams.away;
 
   print('\tPeriod: ${game.linescore.currentPeriod}\n');
-  print('\t\t${awayTeam.score}\n');
-  print('\t\t${homeTeam.score}\n');
+  print('\t\t${awayTeam.team.name}: ${awayTeam.score}\n');
+  print('\t\t${homeTeam.team.name}: ${homeTeam.score}\n');
 }
 
 /// Helper function to print a completed [game]
